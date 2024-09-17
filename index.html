@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container bg-zinc-900 flex justify-center item-center">
+      <div class="mid-container rounded-full py-9 flex h-screen">
+        <form class="bg-slate-700 rounded-md mt-4">
+          <div class="display mt-6 mb-6 mx-6">
+            <input type="text" name="display" class="rounded-full px-12 py-3" />
+          </div>
+
+          <div class="calcbtn bg-slate-900 rounded-md px-6 py-5">
+            <div class="flex gap-3">
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                onclick=" display.value = display.value.toString().slice(0, -1)"
+              >
+                DEL
+              </button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="AC"
+                onclick="display.value = '' "
+              >AC</button>
+            </div>
+
+            <div class="flex gap-9">
+                <button
+             
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="7"
+                onclick="display.value += '7' "
+              >7</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="8"
+                onclick="display.value += '8' "
+              >8</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="9"
+                onclick="display.value += '9' "
+              >9</button>
+              <button
+                class="bg-orange-500 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="÷"
+                onclick="display.value += '÷' "
+              >÷</button>
+            </div>
+            <div class="flex gap-9">
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="4"
+                onclick="display.value += '4' "
+              >4</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="5"
+                onclick="display.value += '5' "
+              >5</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="6"
+                onclick="display.value += '6' "
+              >6</button>
+              <button
+                class="bg-orange-500 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="*"
+                onclick="display.value += '*' "
+              >*</button>
+            </div>
+            <div class="flex gap-9">
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="1"
+                onclick="display.value += '1'"
+              >1</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="2"
+                onclick="display.value += '2' "
+              >2</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="3"
+                onclick="display.value += '3' "
+              >3</button>
+              <button
+                class="bg-orange-500 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="-"
+                onclick="display.value += '-' "
+              >-</button>
+            </div>
+            <div class="flex gap-9">
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="0"
+                onclick="display.value += '0'"
+              >0</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="."
+                onclick="display.value += '.' "
+              >.</button>
+              <button
+                class="bg-gray-700 text-white hover:bg-gray-600 ring-2 mt-5 cursor  px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="="
+                onclick="display.value = eval(display.value) "
+              >=</button>
+              <button
+                class="bg-orange-500 text-white hover:bg-gray-600 ring-2 mt-5 cursor  ring-2 px-4 py-2 border-2 border-black rounded-full flex justify-center item-center"
+                type="button"
+                value="+"
+                onclick="display.value += '+' "
+              >+</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
